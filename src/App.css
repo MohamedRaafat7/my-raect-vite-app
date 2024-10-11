@@ -1,122 +1,132 @@
-#root {
- width: 100%;
- text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
+/* App.css */
 
 
-/* General styling for the application container */
-.div1 {
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #121212; 
+  color: #e0e0e0; 
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  background-color: #f5f5f5;
-  padding: 20px;
-  max-width: 500px;
-  margin: 40px auto;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  align-items: center;
+  height: 100vh;
 }
 
-/* Header styling */
-.h1 {
-  color: #333;
-  font-size: 28px;
+
+.app-container {
+  background-color: #1e1e1e; 
+  border: 1px solid #333; 
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  width: 400px;
+  max-width: 90%;
+  padding: 30px;
+}
+
+
+nav {
   margin-bottom: 20px;
-  text-align: center;
-  font-family: 'Arial', sans-serif;
 }
 
-/* Styling for the list items */
-.div1 ul {
+nav ul {
   list-style: none;
   padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav a {
+  text-decoration: none;
+  color: #42a5f5; 
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #64b5f6; 
+}
+
+
+.login-container, .register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login-form, .register-form {
   width: 100%;
 }
 
-.div1 li {
-  background-color: #ffffff;
-  margin: 8px 0;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  color: black;
-  font-size: 20px;
+h2 {
+  text-align: center;
+  color: #bb86fc; 
 }
 
-/* Input styling */
-#deviceInput {
-  padding: 10px;
-  width: 80%;
-  margin: 10px 0;
-  border: 1px solid #ddd;
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #e0e0e0;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  background-color: #333; 
+  border: 1px solid #555; 
   border-radius: 5px;
+  color: #e0e0e0;
+}
+
+.form-group input:focus {
+  border-color: #42a5f5; 
   outline: none;
-  transition: border-color 0.3s;
 }
 
-#deviceInput:focus {
-  border-color: #007bff;
-}
 
-/* Button styling */
 button {
-  padding: 10px 15px;
-  margin-top: 10px;
-  background-color: #007bff;
-  color: white;
+  width: 100%;
+  padding: 12px;
+  background-color: #42a5f5;
   border: none;
   border-radius: 5px;
+  color: #fff; 
+  font-weight: bold;
   cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s, transform 0.2s;
-  margin-left: 20px;
+  transition: background-color 0.3s;
+  margin-top: 10px;
 }
 
 button:hover {
-  background-color: #0056b3;
-  transform: scale(1.05);
+  background-color: #64b5f6; 
 }
 
-button:active {
-  background-color: #004494;
+
+.error-message {
+  color: #ff5252;
+  background-color: #2e1a1a; 
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ff5252;
+  border-radius: 5px;
+  text-align: center;
 }
 
-/* Add some spacing between the label and the input */
-label {
-  margin: 10px 0 5px;
-  font-size: 14px;
-  color: #333;
+.success-message {
+  color: #4caf50; 
+    background-color: #1b2e1b; 
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #4caf50;
+  border-radius: 5px;
+  text-align: center;
+}
+.link{
+  margin-top: 20px;
 }
